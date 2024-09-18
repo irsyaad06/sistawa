@@ -16,6 +16,9 @@ return new class extends Migration
             $table->foreignId('nim');
             $table->string('nama');
             $table->string('kelompok');
+            $table->string('day_1')->default(false);
+            $table->string('day_2')->default(false);
+            $table->string('day_3')->default(false);
             $table->timestamps();
         });
     }

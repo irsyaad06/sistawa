@@ -69,6 +69,8 @@ class DataMahasiswaResource extends Resource
                 TextColumn::make('nim')->searchable(),
                 TextColumn::make('nama')->searchable(),
                 TextColumn::make('kelompok')->searchable(),
+                 
+
             ])
             ->filters([
                 //

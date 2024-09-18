@@ -37,7 +37,8 @@ class IzinKehadiranResource extends Resource
                 Section::make('Data Diri')
                     ->schema([
                         DatePicker::make('tanggal')
-                            ->label('Tanggal'),
+                            ->label('Tanggal')
+                            ->native(false),
                         Select::make('kelompok')
                             ->label('Kelompok')
                             ->options(DataMahasiswa::distinct()->pluck('kelompok', 'kelompok'))

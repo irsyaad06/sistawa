@@ -14,7 +14,10 @@ class DataMahasiswa extends Model
     protected $fillable = [
         'nim',
         'nama',
-        'kelompok'
+        'kelompok',
+        'day_1',
+        'day_2',
+        'day_3'
     ];
 
     public function izinKehadiran()
