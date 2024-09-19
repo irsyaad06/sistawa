@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\StarkResource\Pages;
 use App\Filament\Resources\StarkResource\RelationManagers;
 use App\Models\DataMahasiswa;
+use App\Models\Stark;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -17,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class StarkResource extends Resource
 {
-    protected static ?string $model = DataMahasiswa::class;
+    protected static ?string $model = Stark::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
@@ -35,6 +36,7 @@ class StarkResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')
                     ->label('No')

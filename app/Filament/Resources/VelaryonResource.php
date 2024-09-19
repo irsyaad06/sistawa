@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class VelaryonResource extends Resource
 {
-    protected static ?string $model = DataMahasiswa::class;
+    protected static ?string $model = Velaryon::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

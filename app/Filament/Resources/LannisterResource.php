@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class LannisterResource extends Resource
 {
-    protected static ?string $model = DataMahasiswa::class;
+    protected static ?string $model = Lannister::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
