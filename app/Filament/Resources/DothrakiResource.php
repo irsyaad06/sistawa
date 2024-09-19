@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class DothrakiResource extends Resource
 {
-    protected static ?string $model = DataMahasiswa::class;
+    protected static ?string $model = Dothraki::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

@@ -13,6 +13,9 @@ class ListDataMahasiswas extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            \EightyNine\ExcelImport\ExcelImportAction::make()
+                ->color("primary")
+                ->label('Import '),
             Actions\CreateAction::make(),
         ];
     }

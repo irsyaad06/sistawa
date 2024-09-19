@@ -10,10 +10,4 @@ class ListStarks extends ListRecords
 {
     protected static string $resource = StarkResource::class;
 
-    // protected function getHeaderActions(): array
-    // {
-    //     return [
-    //         Actions\CreateAction::make(),
-    //     ];
-    // }
 }
