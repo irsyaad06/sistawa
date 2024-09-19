@@ -2,27 +2,29 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\StarkResource\Pages;
-use App\Filament\Resources\StarkResource\RelationManagers;
+use App\Filament\Resources\TargaryenResource\Pages;
+use App\Filament\Resources\TargaryenResource\RelationManagers;
 use App\Models\DataMahasiswa;
+use App\Models\Targaryen;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Table;
 use Filament\Tables\Columns\CheckboxColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class StarkResource extends Resource
+class TargaryenResource extends Resource
 {
     protected static ?string $model = DataMahasiswa::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $pluralModelLabel = 'Absensi - Targaryen';
 
     protected static ?string $navigationGroup = 'Absensi Mahasiswa';
-    public static ?string $pluralModelLabel = 'Absensi - Stark';
 
     public static function form(Form $form): Form
     {
@@ -49,7 +51,7 @@ class StarkResource extends Resource
                 //
             ])
             ->actions([
-                // Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -68,14 +70,14 @@ class StarkResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListStarks::route('/'),
-            'create' => Pages\CreateStark::route('/create'),
-            'edit' => Pages\EditStark::route('/{record}/edit'),
+            'index' => Pages\ListTargaryens::route('/'),
+            'create' => Pages\CreateTargaryen::route('/create'),
+            'edit' => Pages\EditTargaryen::route('/{record}/edit'),
         ];
     }
 
     public static function getEloquentQuery(): Builder
     {
-        return parent::getEloquentQuery()->where('kelompok', 'Stark');
+        return parent::getEloquentQuery()->where('kelompok', 'Targaryen');
     }
 }

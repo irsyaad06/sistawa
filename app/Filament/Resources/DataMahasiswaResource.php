@@ -42,18 +42,12 @@ class DataMahasiswaResource extends Resource
                         'Lannister' => 'Lannister',
                         'Targaryen' => 'Targaryen',
                         'Baratheon' => 'Baratheon',
-                        'Greyjoy' => 'Greyjoy',
                         'Tyrell' => 'Tyrell',
                         'Martell' => 'Martell',
-                        'Arryn' => 'Arryn',
-                        'Umber' => 'Umber',
-                        'Bolton' => 'Bolton',
-                        'Taryl' => 'Taryl',
-                        'Frey' => 'Frey',
-                        'Mormont' => 'Mormont',
-                        'Dayne' => 'Dayne',
                         'Bracken' => 'Bracken',
-
+                        'Velaryon' => 'Velaryon',
+                        'Frey' => 'Frey',
+                        'Dothiarki' => 'Dothiarki',
                     ])
                 ])
             ]);
