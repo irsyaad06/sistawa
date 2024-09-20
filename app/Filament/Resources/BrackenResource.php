@@ -20,7 +20,7 @@ class BrackenResource extends Resource
 {
     protected static ?string $model = Bracken::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $pluralModelLabel = 'Absensi - Bracken';
 
@@ -37,6 +37,7 @@ class BrackenResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')
                     ->label('No')

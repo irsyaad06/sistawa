@@ -20,7 +20,7 @@ class LannisterResource extends Resource
 {
     protected static ?string $model = Lannister::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $navigationGroup = 'Absensi Mahasiswa';
     public static ?string $pluralModelLabel = 'Absensi - Lannister';
@@ -36,6 +36,7 @@ class LannisterResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')
                     ->label('No')

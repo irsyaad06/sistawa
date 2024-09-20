@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Kelompok 2 - Lannister',
             'email' => 'lannister@gmail.com',
-            'password' => 'lanister'
+            'password' => 'lannister'
         ]);
         User::factory()->create([
             'name' => 'Kelompok 3  - Targaryen',
@@ -59,13 +59,13 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Kelompok 7 - Bracken',
             'email' => 'bracken@gmail.com',
-            'password' => ''
+            'password' => 'bracken'
         ]);  
         
         User::factory()->create([
             'name' => 'Kelompok 8 - Velaryon',
             'email' => 'velaryon@gmail.com',
-            'password' => ''
+            'password' => 'velaryon'
         ]);  
         
         User::factory()->create([

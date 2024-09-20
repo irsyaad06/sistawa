@@ -20,7 +20,7 @@ class DothrakiResource extends Resource
 {
     protected static ?string $model = Dothraki::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $pluralModelLabel = 'Absensi - Dothraki';
 
@@ -37,6 +37,7 @@ class DothrakiResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')
                     ->label('No')
