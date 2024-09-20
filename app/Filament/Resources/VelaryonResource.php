@@ -20,7 +20,7 @@ class VelaryonResource extends Resource
 {
     protected static ?string $model = Velaryon::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     protected static ?string $pluralModelLabel = 'Absensi - Velaryon';
 
@@ -36,6 +36,7 @@ class VelaryonResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')
                     ->label('No')
