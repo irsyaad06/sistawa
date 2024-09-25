@@ -36,7 +36,7 @@ class BarangSitaanResource extends Resource
             ->schema([
                 Section::make('Data Mahasiswa')
                     ->schema([
-                        DatePicker::make('tanggal'),
+                       DatePicker::make('tanggal')->native(false),
                         Select::make('kelompok')
                             ->label('Kelompok')
                             ->options(DataMahasiswa::distinct()->pluck('kelompok', 'kelompok'))
