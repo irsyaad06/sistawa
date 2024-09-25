@@ -17,7 +17,24 @@ class DataMahasiswa extends Model
         'kelompok',
         'day_1',
         'day_2',
-        'day_3'
+        'day_3',
+        'barang_1_day_1',
+        'barang_2_day_1',
+        'barang_3_day_1',
+        'barang_4_day_1',
+        'barang_5_day_1',
+
+        'barang_1_day_2',
+        'barang_2_day_2',
+        'barang_3_day_2',
+        'barang_4_day_2',
+        'barang_5_day_2',
+
+        'barang_1_day_3',
+        'barang_2_day_3',
+        'barang_3_day_3',
+        'barang_4_day_3',
+        'barang_5_day_3',
     ];
 
     public function izinKehadiran()

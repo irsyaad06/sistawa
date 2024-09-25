@@ -47,7 +47,7 @@ class DataMahasiswaResource extends Resource
                         'Bracken' => 'Bracken',
                         'Velaryon' => 'Velaryon',
                         'Frey' => 'Frey',
-                        'Dothiarki' => 'Dothiarki',
+                        'Dothraki' => 'Dothraki',
                     ])
                 ])
             ]);

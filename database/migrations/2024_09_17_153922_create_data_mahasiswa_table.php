@@ -19,6 +19,24 @@ return new class extends Migration
             $table->string('day_1')->default(false);
             $table->string('day_2')->default(false);
             $table->string('day_3')->default(false);
+            $table->string('barang_1_day_1')->default(false);
+            $table->string('barang_2_day_1')->default(false);
+            $table->string('barang_3_day_1')->default(false);
+            $table->string('barang_4_day_1')->default(false);
+            $table->string('barang_5_day_1')->default(false);
+
+            $table->string('barang_1_day_2')->default(false);
+            $table->string('barang_2_day_2')->default(false);
+            $table->string('barang_3_day_2')->default(false);
+            $table->string('barang_4_day_2')->default(false);
+            $table->string('barang_5_day_2')->default(false);
+
+            $table->string('barang_1_day_3')->default(false);
+            $table->string('barang_2_day_3')->default(false);
+            $table->string('barang_3_day_3')->default(false);
+            $table->string('barang_4_day_3')->default(false);
+            $table->string('barang_5_day_3')->default(false);
+
             $table->timestamps();
         });
     }

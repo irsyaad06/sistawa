@@ -15,17 +15,7 @@ class ListDataMahasiswas extends ListRecords
         return [
             \EightyNine\ExcelImport\ExcelImportAction::make()
                 ->color("primary")
-                ->label('Import ')
-                ->validateUsing([
-                    'nim' => 'required',
-                    'nama' => 'required',
-                    'kelompok' => 'required',
-                ])
-                ->slideOver()
-                ->uploadField(
-                    fn ($upload) => $upload
-                    ->label("Masukkan file : xls/csv/xlsx")
-                ),
+                ->label('Import '),
             Actions\CreateAction::make(),
         ];
     }
