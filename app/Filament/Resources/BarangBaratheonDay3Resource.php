@@ -37,11 +37,12 @@ class BarangBaratheonDay3Resource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')->label('No')->rowIndex(),
-                TextColumn::make('nim'),
-                TextColumn::make('nama'),
-                TextColumn::make('kelompok'),
+                TextColumn::make('nim')->searchable()->sortable(),
+                TextColumn::make('nama')->searchable()->sortable(),
+                TextColumn::make('kelompok')->searchable(),
                 CheckboxColumn::make('barang_1_day_3')->label('Permen Hitam Putih')->alignCenter(),
                 CheckboxColumn::make('barang_2_day_3')->label('Biskuit Putih Kejepit')->alignCenter(),
                 CheckboxColumn::make('barang_3_day_3')->label('nasi Ketombe + Kebebasan')->alignCenter(),
@@ -67,6 +68,7 @@ class BarangBaratheonDay3Resource extends Resource
             //
         ];
     }
+    
 
     public static function getPages(): array
     {
@@ -75,6 +77,11 @@ class BarangBaratheonDay3Resource extends Resource
             'create' => Pages\CreateBarangBaratheonDay3::route('/create'),
             'edit' => Pages\EditBarangBaratheonDay3::route('/{record}/edit'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return false;
     }
 
     public static function getEloquentQuery(): Builder

@@ -56,13 +56,14 @@ class DataMahasiswaResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('50')
             ->columns([
                 TextColumn::make('index')
                 ->label('No')
                 ->rowIndex(),
-                TextColumn::make('nim')->searchable(),
-                TextColumn::make('nama')->searchable(),
-                TextColumn::make('kelompok')->searchable(),
+                TextColumn::make('nim')->searchable()->sortable(),
+                TextColumn::make('nama')->searchable()->sortable(),
+                TextColumn::make('kelompok')->searchable()->sortable(),
                  
 
             ])
@@ -70,6 +71,7 @@ class DataMahasiswaResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

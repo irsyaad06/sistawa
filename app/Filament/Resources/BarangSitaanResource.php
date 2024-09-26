@@ -84,6 +84,7 @@ class BarangSitaanResource extends Resource
                     ->rowIndex(),
                 TextColumn::make('nim')->label('Nim Mahasiswa'),
                 TextColumn::make('dataMahasiswa.nama')->label('Nama Mahasiswa'),
+                TextColumn::make('dataMahasiswa.kelompok'),
                 TextColumn::make('barang_sitaan'),
                 ImageColumn::make('foto')
                     ->label('Bukti Pelanggaran')

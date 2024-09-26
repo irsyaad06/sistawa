@@ -36,11 +36,12 @@ class BarangDothrakiDay2Resource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultPaginationPageOption('all')
             ->columns([
                 TextColumn::make('index')->label('No')->rowIndex(),
-                TextColumn::make('nim'),
-                TextColumn::make('nama'),
-                TextColumn::make('kelompok'),
+                TextColumn::make('nim')->searchable()->sortable(),
+                TextColumn::make('nama')->searchable()->sortable(),
+                TextColumn::make('kelompok')->searchable(),
                 CheckboxColumn::make('barang_1_day_2')->label('Susu Abe Cekut')->alignCenter(),
                 CheckboxColumn::make('barang_2_day_2')->label('Roti Tukul')->alignCenter(),
                 CheckboxColumn::make('barang_3_day_2')->label('Makaroni Roni Dua Kelinci')->alignCenter(),
@@ -51,7 +52,7 @@ class BarangDothrakiDay2Resource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -65,6 +66,11 @@ class BarangDothrakiDay2Resource extends Resource
         return [
             //
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return false;
     }
 
     public static function getPages(): array
