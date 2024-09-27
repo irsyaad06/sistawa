@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BarangLannisterDay1Resource\Pages;
 use App\Filament\Resources\BarangLannisterDay1Resource\RelationManagers;
-use App\Models\BarangLannisterDay1;
+use App\Models\BaranglannisterDay1;
 use App\Models\DataMahasiswa;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BarangLannisterDay1Resource extends Resource
 {
-    protected static ?string $model = BarangLannisterDay1::class;
+    protected static ?string $model = BaranglannisterDay1::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
